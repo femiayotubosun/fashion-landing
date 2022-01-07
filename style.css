@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --highlight: #cf2929;
+  --dark: #22262a;
+  --light: #fff;
+  --footer-bg: #f2f8fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/* ----------------------------- Main Container ----------------------------- */
+.fashion__container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------- End Main Container --------------------------- */
+
+/* --------------------------------- Header --------------------------------- */
+
+.fashion__header {
+  width: 100%;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+}
+
+.fashion__header-logo {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  color: var(--dark);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fashion__header-links {
+  display: flex;
+}
+
+.fashion__header-links a,
+.fashion__mobile-menu a {
+  margin-right: 2rem;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+.fashion__header-links a:hover {
+  color: var(--highlight);
+}
+
+.fashion__header-icons i {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.fashion__hamburger {
+  display: none;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.fashion__hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  position: relative;
+  margin-bottom: 2px;
+  background: var(--dark);
+  transform-origin: 0 0;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+
+.fashion__hamburger:hover span:nth-child(2) {
+  transform: translateX(-8px);
+  background-color: var(--highlight);
+}
+
+.fashion__hamburger.is-active span:nth-child(1) {
+  transform: translate(-1px, -3px) rotate(45deg);
+}
+
+.fashion__hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.fashion__hamburger.is-active span:nth-child(3) {
+  transform: translate(-4px, 4px) rotate(-45deg);
+}
+.fashion__hamburger.is-active:hover span {
+  background-color: var(--highlight);
+}
+
+.fashion__mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--dark);
+  padding: 2rem 2rem;
+  position: absolute;
+  top: 4rem;
+  left: 0.5rem;
+  transform: translateX(-20rem);
+  transition: 0.4s;
+  z-index: 99;
+}
+
+.fashion__mobile-menu.is-active {
+  transform: translateX(0rem);
+}
+
+.fashion__mobile-menu a {
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.fashion__mobile-menu a:hover {
+  color: var(--highlight);
+}
+
+@media screen and (max-width: 1100px) {
+  .fashion__header {
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .fashion__header {
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fashion__mobile-menu {
+    display: flex;
+  }
+
+  .fashion__header {
+    padding: 1rem 2rem;
+  }
+  .fashion__hamburger {
+    display: block;
+  }
+
+  .fashion__header-links {
+    display: none;
+  }
+
+  .fashion__header-logo {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .fashion__header {
+    padding: 1rem 1rem;
+  }
+  .fashion__hamburger {
+    display: block;
+  }
+
+  .fashion__header-links {
+    display: none;
+  }
+
+  .fashion__header-logo {
+    margin-right: auto;
+  }
+}
+/* ------------------------------- End Header ------------------------------- */
+
+/* ------------------------------ Hero Section ------------------------------ */
+.fashion__hero {
+  max-width: 100vw;
+  height: 656px;
+  background-image: url(./hero.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 5rem;
+}
+
+.fashion__hero p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  color: var(--dark);
+  text-align: left;
+}
+
+.fashion__hero h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--dark);
+  text-align: left;
+}
+
+.fashion__hero-content__buttons {
+  margin-top: 2rem;
+}
+
+.fashion__hero-content__buttons button {
+  outline: none;
+  border: none;
+  padding: 0.5rem 2rem;
+  background: #22262a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.fashion__hero-content__buttons button:last-child {
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .fashion__hero {
+    height: 500px;
+    background-color: yellow;
+    background-size: cover;
+    background-position: 25%, 0%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .fashion__hero p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .fashion__hero h1 {
+    font-size: 50px;
+  }
+
+  .fashion__hero-content__buttons {
+    display: flex;
+  }
+
+  .fashion__hero-content__buttons button {
+    font-size: 14px;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* ---------------------------- End Hero Section ---------------------------- */
+
+/* ---------------------------- Fashion Category ---------------------------- */
+
+.fashion__category {
+  width: 100%;
+  padding: 5rem 2rem;
+  height: 579px;
+  display: grid;
+  grid-template-columns: 262.19px 262.19px 262.19px 262.19px;
+  grid-template-rows: 286.84px 286.84px;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+.fashion__category div {
+  height: 100%;
+  width: 100%;
+}
+
+.fashion__category__top-left {
+  grid-column: 1 / span 2;
+  background-image: url(./fashion\ cat-1.png);
+  background-size: cover;
+}
+
+.fashion__category__right {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+  background-image: url(./fashion\ cat-4.png);
+  background-size: cover;
+}
+
+.fashion__category__bottom-left {
+  order: 3;
+  background-image: url(./Fashion\ cat-2.png);
+  background-size: cover;
+}
+
+.fashion__category__bottom-center {
+  background-image: url(./fashion\ cat-3.png);
+  background-size: cover;
+  order: 4;
+}
+
+.mask {
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  padding-bottom: 10rem;
+}
+
+.fashion__category-button {
+  margin-top: auto;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  outline: none;
+  border: none;
+  padding: 0.4rem 1rem;
+  /* position: relative;
+  margin-right: auto; */
+  cursor: pointer;
+}
+.fashion__category div:hover .mask {
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1100px) {
+  .fashion__category {
+    grid-template-columns: 262.19px 262.19px;
+    grid-template-rows: repeat(4, 265px);
+    margin-top: 2rem;
+    height: unset;
+    padding: 2rem 1rem;
+  }
+
+  .fashion__category__top-left {
+    order: 1;
+    grid-column: 1 / span 2;
+  }
+
+  .fashion__category__bottom-left {
+    order: 2;
+    grid-column: 1;
+  }
+
+  .fashion__category__bottom-center {
+    order: 3;
+  }
+
+  .fashion__category__right {
+    order: 4;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
+  }
+
+  .mask {
+    .mask {
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem;
+      /* padding-left: 5rem;
+      padding-bottom: 10rem;
+    } */
+    }
+  }
+}
+/* -------------------------- End Fashion Category -------------------------- */
+
+/* ----------------------------- GEnder section ----------------------------- */
+
+.fashion__gender-section {
+  margin-top: 2rem;
+}
+
+/* --------------------------- End Gender Section --------------------------- */
