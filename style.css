@@ -560,6 +560,10 @@
   .fashion__gender-section__products-container_men {
     grid-template-columns: 1fr;
   }
+
+  .fashion__gender-section__product {
+    height: 100%;
+  }
 }
 /* --------------------------- End Gender Section --------------------------- */
 
