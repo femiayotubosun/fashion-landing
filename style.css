@@ -450,7 +450,6 @@
 .fashion__gender-section__product-image {
   height: 371px;
   width: 100%;
-  background: cadetblue;
 }
 
 .fashion__gender-section__products-container_women
@@ -566,6 +565,10 @@
 
   .fashion__gender-section__product {
     height: 495.2px;
+  }
+
+  .fashion__gender-section__product-details {
+    margin-top: 0;
   }
 }
 /* --------------------------- End Gender Section --------------------------- */
