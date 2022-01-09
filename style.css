@@ -562,6 +562,8 @@
   }
 
   .fashion__gender-section__product {
+    background-image: none;
+    background: #cf2929;
     height: 100%;
   }
 }
