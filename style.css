@@ -6,6 +6,7 @@
   --dark: #22262a;
   --light: #fff;
   --footer-bg: #f2f8fc;
+  --copyright-bg: #e7f5f8;
 }
 
 * {
@@ -23,6 +24,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* --------------------------- End Main Container --------------------------- */
@@ -34,8 +36,8 @@
   background: var(--light);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 10rem;
+  justify-content: space-around;
+  padding: 1rem 5rem;
 }
 
 .fashion__header-logo {
@@ -48,6 +50,7 @@
 
 .fashion__header-links {
   display: flex;
+  margin-left: auto;
 }
 
 .fashion__header-links a,
@@ -194,7 +197,7 @@
 
 /* ------------------------------ Hero Section ------------------------------ */
 .fashion__hero {
-  max-width: 100vw;
+  width: 100%;
   height: 656px;
   background-image: url(./assets/images/hero.png);
   background-size: cover;
@@ -559,6 +562,139 @@
 
 /* ------------------------------- Avone Style ------------------------------ */
 
+.fashion__avone-style {
+  width: 1133px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.fashion__avone-style__heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.fashion__avone-style__heading h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.fashion__avone-style__heading p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.fashion__avone-style__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.fashion__avone-style__content_A,
+.fashion__avone-style__content_B {
+  height: 694px;
+  width: 100%;
+}
+
+.fashion__avone-style__content_A {
+  padding-top: 5rem;
+}
+
+.fashion__avone-style__content_A img {
+  height: 606.42px;
+  cursor: pointer;
+}
+
+.fashion__avone-style__content_B {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  position: relative;
+}
+.fashion__avone-style__details {
+  width: 100%;
+  border-bottom: 1px solid var(--dark);
+  text-transform: uppercase;
+  width: 169px;
+  margin-right: auto;
+  padding: 0.4rem 0;
+  margin-left: 10rem;
+  cursor: pointer;
+}
+
+.fashion__avone-style__details:hover {
+  color: var(--highlight);
+  border-bottom: 1px solid var(--highlight);
+}
+
+.fashion__avone-style__details p {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+}
+
+.fashion__avone-style__content_B img:nth-child(1) {
+  height: 454.3121032714844px;
+  width: 514px;
+  cursor: pointer;
+}
+
+.fashion__avone-style__content__white_box {
+  height: 283.06px;
+  width: 227px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem 0rem 0rem 1rem;
+}
+
+.fashion__avone-style__content__img {
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/images/avone-right-bottom.png);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .fashion__avone-style__content__white_box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .fashion__avone-style__content {
+    flex-direction: column;
+  }
+  .fashion__avone-style__content_A,
+  .fashion__avone-style__content_B {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .fashion__avone-style__details {
+    margin: unset;
+    margin-top: 1rem;
+  }
+}
 /* ----------------------------- End Avone Style ---------------------------- */
 
 /* -------------------------------- Tachen19 -------------------------------- */
@@ -574,6 +710,7 @@
   padding: 10rem 10rem;
   justify-content: flex-end;
 }
+
 .fashion__tachen19 p {
   font-size: 18px;
   font-weight: 500;
@@ -604,13 +741,12 @@
   line-height: 27px;
 }
 
-/* TODO media query */
 @media screen and (max-width: 850px) {
   .fashion__tachen19 h1 {
     font-size: 50px;
   }
 }
-/* ------------------------------ End Tachen 19 ----------------------------- */
+
 @media screen and (max-width: 750px) {
   .fashion__tachen19 h1 {
     font-size: 40px;
@@ -626,3 +762,203 @@
   }
 }
 /* ------------------------------ End Tachen 19 ----------------------------- */
+
+/* --------------------------------- Footer --------------------------------- */
+.fashion__footer {
+  width: 100%;
+  background: var(--footer-bg);
+  display: flex;
+  flex-direction: row;
+  padding: 10rem;
+}
+
+.fashion__footer-logo {
+  width: 100%;
+}
+
+.fashion__footer-logo h5 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  margin-bottom: 1rem;
+}
+
+.fashion__footer-logo p:nth-child(2) {
+  width: 406px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 2rem;
+}
+
+.fashion__footer-logo__address {
+  display: flex;
+  flex-direction: row;
+}
+
+.fashion__footer-logo__address p {
+  margin-left: 1rem;
+}
+
+.fashion__footer-logo__email {
+  border-bottom: 1px solid var(--dark);
+  width: 14.6rem;
+}
+
+.fashion__footer-logo__socials {
+  margin-top: 1rem;
+  width: 109px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+}
+
+.fashion__footer-logo__socials i {
+  cursor: pointer;
+}
+.fashion__footer-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fashion__footer-links h3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.fashion__footer-links__email {
+  background: #fff;
+  width: 532px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 0 1.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+
+.fashion__footer-links__email input {
+  border: none;
+  outline: none;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.fashion__footer-links__email button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.fashion__footer-links__links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.fashion__footer-links__links-container h4 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.fashion__footer-links__links-container p {
+  margin-top: 1rem;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+@media screen and (max-width: 1300px) {
+  .fashion__footer {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .fashion__footer-logo p:nth-child(2) {
+    width: 300px;
+  }
+
+  .fashion__footer-links__email {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .fashion__footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .fashion__footer-links {
+    margin-top: 2rem;
+  }
+
+  .fashion__footer-logo h5 {
+    font-size: 18px;
+  }
+
+  .fashion__footer-links h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .fashion__footer-links__email {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .fashion__footer-links__links-container {
+    flex-direction: column;
+  }
+
+  .fashion__footer-links__links-container__links {
+    margin-bottom: 2.5rem;
+  }
+}
+/* ------------------------------- End Footer ------------------------------- */
+
+/* -------------------------------- Copyright ------------------------------- */
+
+.fashion__copyright {
+  width: 100%;
+  background: var(--copyright-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fashion__copyright p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--dark);
+}
+
+@media screen and (max-width: 750px) {
+  .fashion__copyright p {
+    font-size: 12px;
+  }
+}
+/* ------------------------------ End Copyright ----------------------------- */
