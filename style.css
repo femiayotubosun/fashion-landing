@@ -83,6 +83,8 @@
   background: none;
   cursor: pointer;
   margin-right: 2rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 .fashion__hamburger span {
@@ -95,6 +97,7 @@
   transform-origin: 0 0;
   transition: 0.4s;
   border-radius: 6px;
+  text-align: center;
 }
 
 .fashion__hamburger:hover span:nth-child(2) {
@@ -112,7 +115,7 @@
 }
 
 .fashion__hamburger.is-active span:nth-child(3) {
-  transform: translate(-4px, 4px) rotate(-45deg);
+  transform: translate(-4px, 5px) rotate(-45deg);
 }
 .fashion__hamburger.is-active:hover span {
   background-color: var(--highlight);
