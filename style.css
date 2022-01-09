@@ -550,6 +550,7 @@
   .fashion__gender-section__products-container_women,
   .fashion__gender-section__products-container_men {
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1rem;
   }
 }
 
@@ -560,6 +561,7 @@
   .fashion__gender-section__products-container_women,
   .fashion__gender-section__products-container_men {
     grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
   }
 
   .fashion__gender-section__product {
